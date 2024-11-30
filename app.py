@@ -73,12 +73,12 @@ menu = st.sidebar.selectbox(
         "Manage Data"
     ], 
     format_func=lambda x: {
-        "Home": "🏠 Home",
-        "Add Recipient": "👤 Add Recipient",
-        "Add Donor": "🫀 Add Donor",
-        "Compatibility Check": "🔍 Compatibility Check",
-        "View Results": "📊 View Results",
-        "Manage Data": "🛠️ Manage Data"
+        "Home": "Home",
+        "Add Recipient": "Add Recipient",
+        "Add Donor": "Add Donor",
+        "Compatibility Check": "Compatibility Check",
+        "View Results": "View Results",
+        "Manage Data": "Manage Data"
     }[x]
 )
 
@@ -91,7 +91,7 @@ if menu == "Home":
 
 # Add Recipient Page
 elif menu == "Add Recipient":
-    st.title("👤 Add Recipient")
+    st.title("Add Recipient")
     
     # Inputs outside the form for interactivity
     name = st.text_input("Full Name")
@@ -148,7 +148,7 @@ elif menu == "Add Recipient":
 
 # Add Donor
 elif menu == "Add Donor":
-    st.title("🫀 Add Donor")
+    st.title("Add Donor")
     
     # Inputs outside the form for interactivity
     name = st.text_input("Full Name")
@@ -270,7 +270,7 @@ elif menu == "Compatibility Check":
     st.write(results_df)
 # View Results
 elif menu == "View Results":
-    st.title("📊 Final Matching Results")
+    st.title("Final Matching Results")
     
     # Load recipients from the database
     recipients = pd.read_sql("SELECT * FROM recipients", engine)
@@ -332,7 +332,7 @@ elif menu == "View Results":
     st.write(recipients_sorted)
 # Manage Data
 elif menu == "Manage Data":
-    st.title("🛠️ Manage Data")
+    st.title("Manage Data")
     
     manage_choice = st.selectbox("Choose Data to Manage", ["Recipients", "Donors"])
     
